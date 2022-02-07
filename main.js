@@ -1,7 +1,6 @@
 
 let containered = document.getElementById('container')
 
-moment().format("MMM Do YY")
 
 for (let customer of customers) {
     let name = customer.name.first + ' ' + customer.name.last
@@ -9,7 +8,11 @@ for (let customer of customers) {
     //     return name.charAt(0).toUpperCase() + name.slice(1)
     // }
     console.log('Name: ', name)
-    let dob =customer.dob.date
+
+    let email = customer.email
+
+    let bday =  moment(customer.dob.date).format("MMM D, YY")
+    let dob ='DOB: ' + bday
 
     let address = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ', ' + customer.location.state + ' ' + customer.location.postcode
         console.log('Address ', address)
@@ -19,12 +22,15 @@ for (let customer of customers) {
 
     let pic = customer.picture.medium
     console.log(pic)
-    
-    let register ='Customer since ' + customer.registered.date
+
+    let date =  moment(customer.registered.date).format("MMM D, YY")
+    let register ='Customer since: ' + date
     console.log(register)
+    
+   
 
     containered.innerHTML += `<div> <img src=${pic} alt="medium-pic"> <br>
-    ${name} <br> ${address} <br> ${dob} <br>${phone} <br> ${register} 
+    <h2>${name} </h2> ${email} <br> ${address} <br> <br> ${dob} <br>${phone} <br> ${register} 
     </div>`
 }
 
