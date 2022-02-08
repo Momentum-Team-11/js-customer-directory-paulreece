@@ -1,12 +1,27 @@
 
 let containered = document.getElementById('container')
 
+function nameToAbbr (stateName) {
+    const idx = usStates.findIndex(function (state) {
+      return state.name === stateName.toUpperCase()
+    })
+  
+    if (idx === -1) {
+      return null
+    }
+  
+    return usStates[idx].abbreviation
+  }
 
 for (let customer of customers) {
+
+    let first = customer.name.first
+
     let name = customer.name.first + ' ' + customer.name.last
-    // function capital() {
-    //     return name.charAt(0).toUpperCase() + name.slice(1)
-    // }
+    
+first[0].toUpperCase() + first.substring(1)
+
+
     console.log('Name: ', name)
 
     let email = customer.email
@@ -30,7 +45,7 @@ for (let customer of customers) {
    
 
     containered.innerHTML += `<div> <img src=${pic} alt="medium-pic"> <br>
-    <h2>${name} </h2> ${email} <br> ${address} <br> <br> ${dob} <br>${phone} <br> ${register} 
+    <h2>${name} </h2> <div class="email">${email} </div> <br> ${address} <br>${phone} <br> <br> ${dob} <br> ${register} 
     </div>`
 }
 

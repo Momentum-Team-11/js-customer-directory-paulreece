@@ -1,5 +1,6 @@
 .box {
     display:grid;
+    gap: 40px;
     grid-template-areas: "box1 box2 box3 box4"
                          "box5 box6 box7 box8"
                          "box9 box10 box11 box12";
@@ -10,4 +11,7 @@ img {
     border-top-right-radius: 80%;
     border-bottom-left-radius: 80%;
     border-bottom-right-radius: 50%;
+}
+.email {
+    color: gray
 }
