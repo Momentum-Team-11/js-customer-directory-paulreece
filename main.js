@@ -10,23 +10,17 @@ for (let customer of customers) {
 
     let bday =  moment(customer.dob.date).format("MMM D, YY")
     let dob ='DOB: ' + bday
-    // for(let usState of usStates)
-    // abbrev: function nameToAbbr (stateName) 
-    //     const idx = usStates.findIndex(function (state) {
-    //       return state.name === stateName.toUpperCase()
-    //     })
-      
-    //     if (idx === -1) {
-    //       return null
-    //     }
-      
-    //     return usStates[idx].abbreviation
-    //   }
-      
-
     
-    let address = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ', ' + customer.location.state + ' ' + customer.location.postcode
+    let stateName=customer.location.state
+    
+    console.log(stateName)
+
+    nameToAbbr(stateName)
+    console.log(nameToAbbr(stateName))
+
+    let address = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ', ' + nameToAbbr(stateName) + ' ' + customer.location.postcode
     console.log('Address ', address)
+
 
     let phone = customer.phone
     console.log(phone)
