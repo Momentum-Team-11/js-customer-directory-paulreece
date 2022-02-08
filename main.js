@@ -39,6 +39,11 @@ for (let customer of customers) {
   console.log(register);
 
   containered.innerHTML += `<div> <img src=${pic} alt="medium-pic"> <br>
-    <h2 class="name">${name} </h2> <div class="email">${email} </div> <br> ${address} <br>${phone} <br> <br> ${dob} <br> ${register} 
+    <h2 class="name">${name} </h2> 
+    <div class="email">${email} </div> 
+    <br> ${address} <br>
+    ${phone} <br> <br> 
+    ${dob} <br> 
+    ${register} 
     </div>`;
 }
