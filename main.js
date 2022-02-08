@@ -1,41 +1,44 @@
-
-let containered = document.getElementById('container')
-
+let containered = document.getElementById("container");
 
 for (let customer of customers) {
-    let name = customer.name.first + ' ' + customer.name.last
-    let first = customer.name.first
+  let name = customer.name.first + " " + customer.name.last;
+  let first = customer.name.first;
 
-    let email = customer.email
+  let email = customer.email;
 
-    let bday =  moment(customer.dob.date).format("MMM D, YY")
-    let dob ='DOB: ' + bday
-    
-    let stateName=customer.location.state
-    
-    console.log(stateName)
+  let bday = moment(customer.dob.date).format("MMM D, YY");
+  let dob = "DOB: " + bday;
 
-    nameToAbbr(stateName)
-    console.log(nameToAbbr(stateName))
+  let stateName = customer.location.state;
 
-    let address = customer.location.street.number + ' ' + customer.location.street.name + ' ' + customer.location.city + ', ' + nameToAbbr(stateName) + ' ' + customer.location.postcode
-    console.log('Address ', address)
+  console.log(stateName);
 
+  nameToAbbr(stateName);
+  console.log(nameToAbbr(stateName));
 
-    let phone = customer.phone
-    console.log(phone)
+  let address =
+    customer.location.street.number +
+    " " +
+    customer.location.street.name +
+    " " +
+    customer.location.city +
+    ", " +
+    nameToAbbr(stateName) +
+    " " +
+    customer.location.postcode;
+  console.log("Address ", address);
 
-    let pic = customer.picture.medium
-    console.log(pic)
+  let phone = customer.phone;
+  console.log(phone);
 
-    let date =  moment(customer.registered.date).format("MMM D, YY")
-    let register ='Customer since: ' + date
-    console.log(register)
-    
-   
+  let pic = customer.picture.medium;
+  console.log(pic);
 
-    containered.innerHTML += `<div> <img src=${pic} alt="medium-pic"> <br>
+  let date = moment(customer.registered.date).format("MMM D, YY");
+  let register = "Customer since: " + date;
+  console.log(register);
+
+  containered.innerHTML += `<div> <img src=${pic} alt="medium-pic"> <br>
     <h2 class="name">${name} </h2> <div class="email">${email} </div> <br> ${address} <br>${phone} <br> <br> ${dob} <br> ${register} 
-    </div>`
+    </div>`;
 }
-

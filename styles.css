@@ -1,29 +1,30 @@
 .bigBox {
-    padding-left: 60px;
-    padding-right: 60px;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .box {
-    font-family: sans-serif;
-    display:grid;
-    justify-content: center;
-    gap: 20px;
-    grid-template-areas: "box1 box2 box3 box4"
-                         "box5 box6 box7 box8"
-                         "box9 box10 box11 box12";
+  font-family: sans-serif;
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+  grid-template-areas:
+    "box1 box2 box3 box4"
+    "box5 box6 box7 box8"
+    "box9 box10 box11 box12";
 }
 h1 {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 img {
-    border-top-left-radius: 50%;
-    border-top-right-radius: 80%;
-    border-bottom-left-radius: 80%;
-    border-bottom-right-radius: 50%;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 80%;
+  border-bottom-left-radius: 80%;
+  border-bottom-right-radius: 50%;
 }
 .email {
-    color: gray
+  color: gray;
 }
 .name {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
