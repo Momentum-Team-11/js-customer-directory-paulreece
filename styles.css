@@ -1,11 +1,20 @@
+.bigBox {
+    padding-left: 60px;
+    padding-right: 60px;
+}
+
 .box {
+    font-family: sans-serif;
     display:grid;
-    gap: 40px;
+    justify-content: center;
+    gap: 20px;
     grid-template-areas: "box1 box2 box3 box4"
                          "box5 box6 box7 box8"
                          "box9 box10 box11 box12";
 }
-
+h1 {
+    padding-left: 5px;
+}
 img {
     border-top-left-radius: 50%;
     border-top-right-radius: 80%;
